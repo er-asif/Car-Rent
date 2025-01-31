@@ -1,0 +1,32 @@
+{% extends "custparent.html" %}
+{% block body %}
+    <div class="row">
+        <div class="col-sm-12">
+            <h1 style="text-align:center;">View Your Bookings</h1>   
+            <table class="table table-bordered text-light">
+                <tr>
+                    <th>S.No.</th>
+                    <th>Car Name</th>
+                    <th>Car No</th>
+                    <th>Driver Name</th>
+                    <th>Car Rent</th>
+                    <th>Booking Date</th>
+                    <th>Return</th>
+                </tr>
+                {% for b in booking %}
+                <tr>
+                <td>{{forloop.counter}}</td>
+                <td>{{b.carname}}</td>
+                <td>{{b.carno}}</td>
+                <td>{{b.drivername}}</td>
+                <td>{{b.carrent}}</td>
+                <td>{{b.bookingdate}}</td> 
+                <td>
+                    <a href="{% url 'custapp:returncar' id=b.carid %}" class="btn btn-success">Return</a>
+                </td>               
+            </tr>
+                {% endfor %}
+            </table>  
+        </div>
+    </div>
+{% endblock body %}

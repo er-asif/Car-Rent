@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RENTWHƎELZ</title>
+    <!----LINK TO CSS----->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!---LINK TO Boxicon-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+
+<body>
+<!-- navbar start -->
+<div class="col-sm-12 row">
+    <div class="col-sm-3 mx-auto my-3">
+        <a href="#" class="logo"><img src="{% static 'img/jeep.png' %}" alt=""></a>
+    </div>
+    <div class="col-sm-8">
+        <nav class="navbar navbar-expand-lg navbar-light bg-none">
+            <div class="container-fluid">
+              
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'mainapp:index' %}">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Ride</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'mainapp:services' %}">Services</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'mainapp:about' %}">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'mainapp:contact' %}">Contact us</a>
+                  </li>
+                </ul>
+                <form class="d-flex">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url 'mainapp:registration' %}" style="color: black;">Sign up</a>
+                      </li>
+                      <li class="nav-item rounded" style="background-color: rgb(240, 100, 49);">
+                        <a class="nav-link active"aria-current="page" href="{% url 'mainapp:login' %}" style="color: black;">Sign in</a>
+                      </li>
+                </form>
+              </div>
+            </div>
+          </nav>
+    </div>
+</div>
+<!-- navbar end -->
+
+<!-- slider start -->
+<div class="col-sm-12">
+  <img src="{% static 'img/serviceback.jpg' %}" class="d-block w-100" alt="...">
+</div>
+<!-- slider end -->
+
+   <!-- main about section start -->
+  <br><br> <h1 class="ps-5 ms-4">Services</h1><br><br>
+   <div class="col-sm-10 mx-auto">
+     <p  style="text-align: justify;">RENTWHƎELZ Travel is engaged in offering the best Car Rental Services in Delhi, Delhi NCR regions like Faridabad, Ghaziabad, Noida, Gurgaon, Greater Noida, and many nearby destinations like Haryana, Agra, and Jaipur. The company within a short span of 8 years has made a name in the car rental and car hire industry by providing world-class car lease services as per the requirements of the client that too at a cost-effective rate.</p>
+     <p  style="text-align: justify;">The company has a fleet of cars of all categories that include luxury cars, Full-Size Cars, Mid Size Cars, Vans, and Sports Utility Vehicles (SUVs). Clients who are budget concerned can choose cars like Maruti Wagan R, Maruti Swift DZire, Maruti Alto 800, Maruti Esteem, Honda City, Mahindra Bolero, Mahindra Scorpio, Tata Indica, Tata Sumo, Maruti Versa, Maruti Zen and Maruti 800, etc. We have a wide range of cars with us with both AC and Non AC facilities to meet the requirements of every individual client as per their requirements.</p>  
+     <p style="text-align: justify;">We are a leading car rental company in Delhi, offering taxi booking on rent for airport pick up and drop facilities, outstation tours to places like Agra, Jaipur, Shimla, and many more. Apart from outstations tours, you can also visit the nearby Delhi NCR regions, cars are required for weddings, trips, or for many other purposes as per the requirements of clients. Our services are available round the clock and we are happy to help you at any time.
+
+     </p>  
+     <p style="text-align: justify;">Our cars are well maintained and are driven by experienced, multilingual, and well-mannered chauffeurs who give high preferences to safety, safe drive, and a hassle-free trip to our clients. Moreover, our drivers have good knowledge about the road maps of Delhi, Delhi NCR regions, Agra and Jaipur thus ensure that you reach a particular place on time and attend your meetings on time, complete your work, or reach the airport before the projected time. Thus our professionalism towards work and well-organized car rental services at an affordable cost has made us one of the leading car leases and car hire service provider in Delhi NCR and nearest stations.</p>  
+     <br><br>
+
+     
+</div>
+
+
+<!-- basic intro of cars start -->
+<!--Services-->
+<div class="ow col-sm-12">
+    <section class="services" id="services">
+        <div class="heading">
+            <span>Best Services</span>
+            
+        </div>
+        
+        <div class="services-container">
+            <div class="row col-sm-12">
+           
+            <div class="box col-sm-3">
+                <div class="box-img h-50">
+                    <img src="{% static 'img/wagnor.png' %}" alt="">
+                </div>
+                <br>
+                <h3>Economical Cars</h3>
+                <br><br>
+                <a href="#" class="btn">Explore Now</a>
+            </div>
+        
+
+            <div class="box col-sm-3">
+                <div class="box-img h-50">
+                    <img src="{% static 'img/creata.png' %}" alt="">
+                </div>
+                <br>
+                <h3>Suv Cars</h3>
+                <br><br>
+                <a href="#" class="btn">Explore Now</a>
+            </div>
+
+            <div class="box col-sm-3">
+                <div class="box-img h-50">
+                    <img src="{% static 'img/bmw1.png' %}" alt="">
+                </div>
+                <br>
+                <h3>Luxury Cars</h3>
+                <br><br>
+                <a href="#" class="btn">Explore Now</a>
+            </div>
+
+            <div class="box col-sm-3">
+                <div class="box-img h-50">
+                    <img src="{% static 'img/lux.png' %}" alt="">
+                </div>
+               <br>
+                <h3>Convertibles Car</h3>
+                <br><br>
+                <a href="#" class="btn">Explore Now</a>
+            </div>
+        </div>
+    </div>
+    </section>
+
+</div>
+<!-- basic intro of cars end -->
+
+<!-- why section start -->
+<div class="col-sm-10 mx-auto">
+    <br><br><h3>Why RENTWHƎELZ Car Rental Service Providers</h3><br>
+     <p style="text-align: justify;">We are one of the most trusted and leading car rental service providers in Delhi operating for the last 10 years in the national capital regions. Our clients are from all sectors be it corporate, banks, small industries, microfinance companies, schools, families, travelers, tourists, etc. Our services are highly appreciated by our clients thus motivating us to extend our service to other regions of the nation.</p>
+      <ul>
+        <li>--> Deals at Exclusive Prices</li>
+        <li>--> Excellent experienced Chauffeurs (Drivers) with knowledge of road maps of Delhi, Manali, Rajasthan, Delhi NCR Region, Mathura, Agra, Vrindavan, etc.</li>
+        <li>--> No Compromise in Quality</li>
+        <li>--> Always happy to serve our best services</li>
+      </ul>
+</div>
+<!-- why section end -->
+
+<!-- footer start -->
+
+ <!-- footer start -->
+ <div class=" col-sm-12" style="background-color: rgb(219, 99, 43);">
+    <div class="col-sm-9 mx-auto my-5 py-5">
+        <div class="row">
+            <div class="col-sm-3 mx-auto">
+                <img src="{% static 'img/jeep.png' %}" class="img-fluid mb-4" style="height:15vh;background-color: white; border-radius: 50%;"><br>
+                <h6 style="color: white;">RENTWHƎELZ</h6>
+                <div class="col-sm-12">
+                    <img src="{% static 'img/instalogo.png' %}" class="img-fluid p-1" style="height:2rem; border-radius: 50%; border: 1px solid rgb(212, 57, 57); background-color:lightgray">
+                    <img src="{% static 'img/facebooklogo.png' %}" class="img-fluid p-1" style="height:2rem; border-radius: 50%; border: 1px solid rgb(212, 57, 57); background-color:lightgray">
+                    <img src="{% static 'img/youtubelogo.webp' %}" class="img-fluid p-1" style="height:2rem; border-radius: 50%; border: 1px solid rgb(212, 57, 57); background-color:lightgray">
+                    <img src="{% static 'img/linkedlogo.webp' %}" class="img-fluid p-1" style="height:2rem; border-radius: 50%; border: 1px solid rgb(212, 57, 57); background-color:lightgray">
+                    <img src="{% static 'img/twitterlogo.png' %}" class="img-fluid p-1" style="height:2rem; border-radius: 50%; border: 1px solid rgb(212, 57, 57); background-color:lightgray">
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <h2 style="color:white;">Useful Links</h2><br>
+                <p style="color: white;">-> home</p>
+                <p style="color: white;">-> Ride </p>
+                <p style="color: white;">-> Services</p>
+                <p style="color: white;">-> About us</p>
+                <p style="color: white;">-> Contact us</p>
+                
+
+            </div>
+
+            <div class="col-sm-3">
+                <h2 style=" color:white;">Contact info</h2><br>
+                <h4 style="color: white;"></h4>
+                <p style="color: white;">Qutub Minar,New Delhi 110030</p><br><br>
+
+                <h6 style="color: white;">+91 1111111111<br><br>
+                    &nbsp; &nbsp; Give us a call</h6>
+            </div>
+
+            <div class="col-sm-3">
+                
+                <div class="row">
+                    <h2 style=" color:white;">Suscribe</h2><br><br><br>
+                    <p style="color: white;">Fill the detail below to receive the manual of the RENTWHƎELZ</p>
+
+                    <form action="#">
+                        <div class="form-row">
+                        <div class="col dk-footer-form">
+                        <input type="email" class="form-control" placeholder="Email Address"><br>
+                        <button type="submit"class=" btn btn-danger">submit</button>
+                        </button>
+                        </div>
+                        </div>
+                        </form>
+                </div>
+            </div>
+        </div>
+    </div>
+   <div class="col-sm-12" style="background-color: rgb(223, 82, 11);">
+    <div class="col-sm-12">
+        <h4 style="color:white; text-align: center; ">&copy; Designed and Developed by RENTWHƎELZ</h4>
+    </div>
+   </div> 
+</div>
+<!-- footer end -->
+
+
+
+
+
+
+
+    <!--Scroll Reveal-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+
+    <!------link to js----->
+    <script src="main.js"></script>
+</body>
+
+</html>

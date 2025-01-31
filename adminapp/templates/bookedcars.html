@@ -1,0 +1,38 @@
+{% extends "adminparent.html" %}
+{% block body %}
+    <div class="row">
+        <div class="col-sm-12">
+            <h1 style="text-align:center;">Booked Cars</h1>   
+            <div class="table-responsive">
+                <table class="table table-bordered text-light">
+                    <tr>
+                        <th>S.No</th>
+                        <th>Booking ID</th>
+                        <th>Car ID</th>
+                        <th>Car Name</th>
+                        <th>Car No</th>
+                        <th>Booked By</th>
+                        <th>Contact No</th>
+                        <th>Driver Name</th>
+                        <th>Car Rent</th>
+                        <th>Date</th>      
+                    </tr>
+                    {% for b in bookedcars %}
+                        <tr>
+                            <td>{{forloop.counter}}</td> 
+                            <td>{{b.bid}}</td>
+                            <td>{{b.carid}}</td>                                       
+                            <td>{{b.carname}}</td>                                       
+                            <td>{{b.carno}}</td>                                       
+                            <td>{{b.bookedby}}</td>                                       
+                            <td>{{b.contactno}}</td>                                       
+                            <td>{{b.drivername}}</td>                                       
+                            <td>{{b.carrent}}</td>
+                            <td>{{b.bookingdate}}</td>                                       
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock body %}

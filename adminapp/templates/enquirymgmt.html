@@ -1,0 +1,26 @@
+{% extends "adminparent.html" %}
+{% block body %}
+    <div class="row">
+        <h1 style="text-align:center;">View Enquiries</h1>
+        <div class="col-sm-12" style="overflow-x:scroll;">
+            <table class="table table-bordered text-light">
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Email Address</th>
+                    <th>Subject</th>
+                    <th>Message</th>              
+                </tr>
+                {% for e in enq %}
+                    <tr>
+                        <td>{{e.id}}</td>
+                        <td>{{e.name}}</td>
+                        <td>{{e.emailaddress}}</td>
+                        <td>{{e.subject}}</td>
+                        <td>{{e.message}}</td>                                                
+                    </tr>
+                {% endfor %}
+            </table>                 
+        </div>
+    </div>
+{% endblock body %}

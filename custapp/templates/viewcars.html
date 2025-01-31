@@ -1,0 +1,36 @@
+{% extends "custparent.html" %}
+{% block body %}
+    <div class="row">
+        <div class="col-sm-12">
+            <h1 style="text-align:center;">View Cars</h1>   
+            <table class="table table-bordered text-light">
+                <tr>
+                    <th>S.No.</th>
+                    <th>Car Name</th>
+                    <th>Car No</th>
+                    <th>Driver Name</th>
+                    <th>Car Rent</th>
+                    <th>Car Pic</th>
+                    <th>Book</th>
+                </tr>
+                {% for ci in carinfo %}
+                <tr>
+                <td>{{forloop.counter}}</td>
+                <td>{{ci.carname}}</td>
+                <td>{{ci.carno}}</td>
+                <td>{{ci.drivername}}</td>
+                <td>{{ci.carrent}}</td>
+                <td>
+                    <img src="{{ci.carpic.url}}" width="100" height="100"/>
+                </td>
+                <td>
+                    <a href="{% url 'custapp:book' cid=ci.carid %}">
+                        <button type="button" class="btn btn-success">Book</button>
+                    </a>
+                </td>
+            </tr>
+                {% endfor %}
+            </table>  
+        </div>
+    </div>
+{% endblock body %}

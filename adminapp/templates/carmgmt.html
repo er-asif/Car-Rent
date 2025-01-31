@@ -1,0 +1,88 @@
+{% extends "adminparent.html" %}
+{% block body %}
+{% if messages %}
+      {% for message in messages %}
+      <div class="alert alert-success alert-dismissible fade show" role="alert">
+        {{message}}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      {% endfor %}
+  {% endif %}
+    <div class="row">
+        <div class="col-sm-12">
+            <h1 style="text-align:center;">Add Car Information</h1>   
+            <form class="form-group" action="{% url 'adminapp:carmgmt' %}" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <table class="table table-bordered text-light" style="width:60%;margin: auto;">
+                    <tr>
+                        <td>Enter Car Name</td>
+                        <td>
+                            <input type="text" name="carname" class="form-control text-light"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Enter Car No</td>
+                        <td>
+                            <input type="text" name="carno" class="form-control text-light"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Enter Driver Name</td>
+                        <td>
+                            <input type="text" name="drivername" class="form-control text-light"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Enter Car Rent/ Km.</td>
+                        <td>
+                          <input type="number" name="carrent" class="form-control text-light"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Select File to Upload</td>
+                        <td>
+                            <input type="file" name="carpic" class="form-control text-light"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="2" style="text-align:center;">
+                            <button type="submit" class="btn btn-primary">Add Car</button>
+                        </td>
+                      </tr>
+                </table>
+            </form>  
+        </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-sm-12">
+        <h1 style="text-align:center;">Car List</h1>
+        <div class="table-reponsive">
+          <table class="table table-bordered text-light">
+            <tr>
+                <th>S.No.</th>
+                <th>Car Name</th>
+                <th>Car No</th>
+                <th>Driver Name</th>
+                <th>Car Rent</th>
+                <th>Car Pic</th>
+                
+            </tr>
+            {% for ci in carinfo %}
+            <tr>
+            <td>{{forloop.counter}}</td>
+            <td>{{ci.carname}}</td>
+            <td>{{ci.carno}}</td>
+            <td>{{ci.drivername}}</td>
+            <td>{{ci.carrent}}</td>
+            <td>
+                <img src="{{ci.carpic.url}}" width="100" height="100"/>
+            </td>
+            
+        </tr>
+            {% endfor %}
+        </table>
+        </div>
+      </div>
+    </div>
+{% endblock body %}

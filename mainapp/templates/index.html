@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RENTWHƎELZ</title>
+    <!----LINK TO CSS----->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!---LINK TO Boxicon-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+
+<body>
+<!-- navbar start -->
+<div class="row col-sm-12 ">
+    <div class="col-sm-3 mx-auto my-3">
+        <a href="#" class="logo"><img src="{% static 'img/jeep.png' %}" alt=""></a>
+    </div>
+    <div class="col-sm-8">
+        <nav class="navbar navbar-expand-lg navbar-light bg-none">
+            <div class="container-fluid">
+              
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'mainapp:index' %}">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Ride</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'mainapp:services' %}">Services</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'mainapp:about' %}">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'mainapp:contact' %}">Contact us</a>
+                  </li>
+                </ul>
+                <form class="d-flex">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url 'mainapp:registration' %}" style="color: black;">Sign up</a>
+                      </li>
+                      <li class="nav-item rounded" style="background-color: rgb(240, 100, 49);">
+                        <a class="nav-link active"aria-current="page" href="{% url 'mainapp:login' %}" style="color: black;">Sign in</a>
+                      </li>
+                </form>
+              </div>
+            </div>
+          </nav>
+    </div>
+</div>
+<!-- navbar end -->
+
+    <!---Home-->
+    <div class=" col-sm-12">
+    <section class="home" id="home">
+        <div class="text">
+            <h1><span>Looking</span> to <br> Rent a Car</h1>
+            <p>Find a perfect car for your trip.</p>
+            <p>Rent a car and discover the world at your own pace. </p>
+            
+        </div>
+        <div class="form-container">
+            <form action="">
+                <div class="input-box">
+                    <span>Location</span>
+
+                    <select id="inputState" class="form-select" style="background-color: rgba(233, 234, 236, 0.84);">
+                        <option selected>Search Places</option>
+                        <option>Delhi Ncr</option>
+                        <option>Kolkata</option>
+                      </select>
+                      <!-- <input type="search" name="" id="" placeholder="Search Places"> -->
+                </div>
+                <div class="input-box">
+                    <span>Pick-Up Date</span>
+                    <input type="date" name="" id="">
+                </div>
+                <div class="input-box">
+                    <span>Return Date</span>
+                    <input type="date" name="" id="">
+                </div>
+
+                <input type="submit" class="btn">
+            </form>
+        </div>
+    </section>
+</div>
+    <!----Ride---->
+<div class="ow col-sm-12">
+    <section class="ride" id="ride">
+        <div class="heading">
+            <span>How It Works?</span>
+            <h1>Rent With 3 Steps</h1>
+        </div>
+        <div class="ride-container">
+            <div class="box">
+                <i class="bx bxs-map"></i>
+                <h2>Choose a Location</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea cum at dignissimos. Culpa et sapiente at
+                    officia sit, explicabo delectus?</p>
+            </div>
+            <div class="box">
+                <i class='bx bxs-calendar-check'></i>
+                <h2>Pick-up Date </h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea cum at dignissimos. Culpa et sapiente at
+                    officia sit, explicabo delectus?</p>
+            </div>
+            <div class="box">
+                <i class="bx bxs-calendar-star"></i>
+                <h2>Book A Car </h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea cum at dignissimos. Culpa et sapiente at
+                    officia sit, explicabo delectus?</p>
+            </div>
+        </div>
+
+    </section>
+</div>
+    <!--Services-->
+    <div class="ow col-sm-12">
+    <section class="services" id="services">
+        <div class="heading">
+            <span>Best Services</span>
+            <h1>Explore Out Top Deals <br>From Top Rated Dealers </h1>
+        </div>
+        
+        <div class="services-container">
+            <div class="row col-sm-12">
+            <div class="box col-sm-3">
+                <div class="box-img h-50">
+                    <img src="{% static 'img/innova.png' %}" alt="">
+                </div>
+                <p>2023</p>
+                <h3>2023 Toyota Innova</h3>
+                <h2>&#8377 4000<span>/day</span><h2></h2>
+                <a href="#" class="btn">Rent Now</a>
+            </div>
+            <div class="box col-sm-3">
+                <div class="box-img h-50">
+                    <img src="{% static 'img/eartiga.png' %}" alt="">
+                </div>
+                <p>2023</p>
+                <h3>2023 Maruti Ertiga</h3>
+                <h2>&#8377 3700<span>/day</span><h2></h2>
+                <a href="#" class="btn">Rent Now</a>
+            </div>
+
+            <div class="box col-sm-3">
+                <div class="box-img h-50">
+                    <img src="{% static 'img/city.png' %}" alt="">
+                </div>
+                <p>2022</p>
+                <h3>2021 Honda City</h3>
+                <h2>&#8377 2200 <span>/day</span></h2>
+                <a href="#" class="btn">Rent Now</a>
+            </div>
+
+            <div class="box col-sm-3">
+                <div class="box-img h-50">
+                    <img src="{% static 'img/amaze.png' %}" alt="" >
+                </div>
+                <p>2023</p>
+                <h3>2020 Honda Amaze</h3>
+                <h2>&#8377 2500<span>/day</span></h2>
+                <a href="#" class="btn">Rent Now</a>
+            </div>
+            <div class="box col-sm-3">
+                <div class="box-img h-50">
+                    <img src="{% static 'img/creata.png' %}" alt="">
+                </div>
+                <p>2023</p>
+                <h3>2021 Hundai Creta</h3>
+                <h2>&#8377 2800 <span>/day</span></h2>
+                <a href="#" class="btn">Rent Now</a>
+            </div>
+        
+
+            <div class="box col-sm-3">
+                <div class="box-img h-50">
+                    <img src="{% static 'img/breeza.webp' %}" alt="">
+                </div>
+                <p>2022</p>
+                <h3>2022 Maruti Breeza</h3>
+                <h2>&#8377 2500 <span>/day</span></h2>
+                <a href="#" class="btn">Rent Now</a>
+            </div>
+
+            <div class="box col-sm-3">
+                <div class="box-img h-50">
+                    <img src="{% static 'img/punch.webp' %}" alt="">
+                </div>
+                <p>2022</p>
+                <h3>Tata punch</h3>
+                <h2>&#8377 1800<span>/day</span></h2>
+                <a href="#" class="btn">Rent Now</a>
+            </div>
+
+            <div class="box col-sm-3">
+                <div class="box-img h-50">
+                    <img src="{% static 'img/wagnor.png' %}" alt="">
+                </div>
+                <p>2023</p>
+                <h3>2020 Wagnor</h3>
+                <h2>&#8377 1500 <span>/day</span></h2>
+                <a href="#" class="btn">Rent Now</a>
+            </div>
+        </div>
+    </div>
+    </section>
+
+</div>
+
+    <!--About-->
+<div class="ow col-sm-12">
+    <section class="about" id="about">
+        <div class="heading">
+            
+            <h1>Best Customer Experience</h1>
+        </div>
+        <div class="about-container">
+            <div class="about-img">
+                <img src="{% static 'img/about.png' %}" alt="">
+            </div>
+            <div class="about-text">                
+                <p>we believe that renting a car should be as straightforward and personalized as driving your own vehicle. Our goal is to offer you freedom by helping you find the perfect car at an affordable price. We rely on real reviews, genuine customer feedback, and our extensive experience to guide you toward the best rental options. With over 8,000 locations worldwide, we’re here to make your car rental experience hassle-free and enjoyable</p>
+                <a href="#" class="btn">Learn More</a>
+
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- An Introduction of Self Drives !  start -->
+<h1 style="text-align: center;">An Introduction of Self Drives ! </h1><br>
+<div class=" row col-sm-10 mx-auto">
+    <div class="col-sm-7">
+    <p>RENTWHƎELZ is a  car hire/car rental company which provides a magnificent range of vehicles to its users. Our range of vehicles is large, starting from the smallest and the basic of hatchbacks to the most luxurious and premium sedans, convertibles and super premium SUVs, to suit all budgets and purposes.</p><br><br>
+    <p>RENTWHƎELZ is a very customer oriented company where client service and satisfaction comes first. This is achieved through our 24/7 customer support and care center which is manned by highly experienced professionals from the industry to provide the best possible management of backend operations for our clients. Further to this we have our in house maintenance team which makes sure every time you hire a car or rent from us, it is in top mechanical condition.</p>
+</div>
+<div class="about-img col-sm-5">
+    <img src="{% static 'img/selfdrive.jpg' %}" class="rounded" alt="">
+</div>
+</div>
+<!-- An Introduction of Self Drives ! end  -->
+
+
+<!-- Self Drives Delivers start -->
+<br><br>
+<h1 style="text-align: center;">Self Drives Delivers</h1><br>
+
+<div class="row col-sm-10 mx-auto">
+    <div class="card-group">
+        <div class="card border border-white">
+          <img src="{% static 'img/s1.png' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title" style="text-align: center;">Customer Satisfaction</h5>
+            
+          </div>
+          
+        </div>
+        <div class="card border border-white">
+          <img src="{% static 'img/s2.png' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title" style="text-align: center;">Maintained Fleet</h5>
+           
+          </div>
+          
+        </div>
+        <div class="card border border-white">
+          <img src="{% static 'img/s3.png' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title" style="text-align: center;">24x7 Operations</h5>
+           
+          </div>
+          
+        </div>
+        <div class="card border border-white">
+            <img src="{% static 'img/s4.png' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title" style="text-align: center;">GPS Tracking</h5>
+             
+            </div>
+            
+          </div>
+          <div class="card border border-white">
+            <img src="{% static 'img/s5.png' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title" style="text-align: center;">ISO Certified</h5>
+             
+            </div>
+            
+          </div>
+      </div>
+</div>
+<!-- Self Drives Delivers end -->
+
+    <!--Reviews-->
+<br><br>
+<h1 style="text-align: center; color:rgb(187, 46, 46)">Incredible Coustomer Says</h1>
+<h1 style="text-align: center;">Client Testimonials</h1><br><br>
+
+
+    <!--NewsLetter-->
+<br><br>
+    
+    <!-- information start -->
+    <div class="col-sm-10 mx-auto">
+        <h3>ONLINE CAR RENTAL SERVICES</h3>
+    <p>
+        We always focus on customer satisfaction. So we provide 24×7 customer supports and we have highly experienced executives who are always there to help you. Apart from this, we have a wide range of fleets so you have an option to choose whichever you want. We are a leader of Car Rental Services in Delhi and our fleets are pocket-friendly. There are no hidden charges; everything is clearly mentioned on our website.
+    </p><br><br>
+</div>
+    <div class="col-sm-10 mx-auto"><h3>CAR ON RENT FOR OUTSTATIONS</h3>
+    <p>Now a days renting a car is simply be done with a click as is everything else that is easily available through online search. Just visit our car car rental website, select the desired car as per requirements, after having paid the security deposit, meet at our pickup location & our executive will hand over the car, and lastly when the purpose of renting the car is fulfilled, passing some security checks the car is returned to our rental company.</p>
+    </div><br>
+    <div class="col-sm-10 mx-auto"><h3>SELF DRIVE CARS IN DELHI</h3>
+    <p>Owning a car is not affordable for everyone, therefore turning to a leading affordable and rental car hire company serves in everyone’s best interests. Now say someone wants to travel to Delhi for a business trip and they do not want the hassle of having to use the Metro or the Bus services then its beneficial to reach out to a Car Hire Company in Delhi and attain the surety that traveling will not be a sore point.</p>
+    </div><br>
+    <div class="col-sm-10 mx-auto"><h3>CARS FOR WEDDING</h3>
+    <p>We provide a chauffeur driven car for your big day as it’s your special day and nothing should be too much trouble. We are happy to discuss and arrange for your Wedding Car to be dressed with ribbons and flowers to match your wedding theme. Our drivers are highly trained, will be punctual, and immaculately dressed, attentive and courteous. If you have more than one destination on the day, just let us know and we can schedule each stop accordingly so your day runs smoothly on the D-Day.
+
+    </p>
+    </div><br>
+    <div class="col-sm-10 mx-auto"><h3>Company Information</h3>
+    <p>Selfdrives.in is solely owned by Pannu Car Rental Pvt. Ltd. in India with sole and exclusive rights to own and operate Self Drives Car from New Delhi. For any queries related to company, kindly email us directly at it@pannucarrental.com
+
+    </p>
+    <p>
+        We have come across a few instances of fraudsters posing as Pannu Car Rental Pvt. Ltd. and asking for payment from customers with the Car Rental booking with Selfdrives or Pannu Car Rental. We therefore caution and urge all interested customer's to be careful and vigilant and interact only with the email id mentioned above if someone ask for the Cash. Anyone dealing with such fraudsters shall be doing so on their own peril, risk and consequences.
+    </p>
+    <p>Neither Pannu Car Rentals Pvt. Ltd. nor its Directors/Officers shall be responsible for any loss, harm, damage or fraud that occurs or may occur or arise to any person who decides to access such fake websites, or deal with them.</p>
+    </div>
+    <!-- information end -->
+
+<!-- suscribe section -->
+<br><br>
+    
+
+
+
+
+</div>
+
+<!-- footer start -->
+
+ <!-- footer start -->
+ <div class=" col-sm-12" style="background-color: rgb(219, 99, 43);">
+    <div class="col-sm-9 mx-auto my-5 py-5">
+        <div class="row">
+            <div class="col-sm-3 mx-auto">
+                <img src="{% static 'img/jeep.png' %}" class="img-fluid mb-4" style="height:15vh;background-color: white; border-radius: 50%;"><br>
+                <h6 style="color: white;">RENTWHƎELZ</h6>
+                <div class="col-sm-12">
+                    <img src="{% static 'img/instalogo.png' %}" class="img-fluid p-1" style="height:2rem; border-radius: 50%; border: 1px solid rgb(212, 57, 57); background-color:lightgray">
+                    <img src="{% static 'img/facebooklogo.png' %}" class="img-fluid p-1" style="height:2rem; border-radius: 50%; border: 1px solid rgb(212, 57, 57); background-color:lightgray">
+                    <img src="{% static 'img/youtubelogo.webp' %}" class="img-fluid p-1" style="height:2rem; border-radius: 50%; border: 1px solid rgb(212, 57, 57); background-color:lightgray">
+                    <img src="{% static 'img/linkedlogo.webp' %}" class="img-fluid p-1" style="height:2rem; border-radius: 50%; border: 1px solid rgb(212, 57, 57); background-color:lightgray">
+                    <img src="{% static 'img/twitterlogo.png' %}" class="img-fluid p-1" style="height:2rem; border-radius: 50%; border: 1px solid rgb(212, 57, 57); background-color:lightgray">
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <h2 style="color:white;">Useful Links</h2><br>
+                <p style="color: white;">-> home</p>
+                <p style="color: white;">-> Ride </p>
+                <p style="color: white;">-> Services</p>
+                <p style="color: white;">-> About us</p>
+                <p style="color: white;">-> Contact us</p>
+                
+
+            </div>
+
+            <div class="col-sm-3">
+                <h2 style=" color:white;">Contact info</h2><br>
+                <h4 style="color: white;"></h4>
+                <p style="color: white;">Qutub Minar,New Delhi 110030</p><br><br>
+
+                <h6 style="color: white;">+91 1111111111<br><br>
+                    &nbsp; &nbsp; Give us a call</h6>
+            </div>
+
+            <div class="col-sm-3">
+                
+                <div class="row">
+                    <h2 style=" color:white;">Suscribe</h2><br><br><br>
+                    <p style="color: white;">Fill the detail below to receive the manual of the RENTWHƎELZ</p>
+
+                    <form action="#">
+                        <div class="form-row">
+                        <div class="col dk-footer-form">
+                        <input type="email" class="form-control" placeholder="Email Address"><br>
+                        <button type="submit"class=" btn btn-danger">submit</button>
+                        </button>
+                        </div>
+                        </div>
+                        </form>
+                </div>
+            </div>
+        </div>
+    </div>
+   <div class="col-sm-12" style="background-color: rgb(223, 82, 11);">
+    <div class="col-sm-12">
+        <h4 style="color:white; text-align: center; ">&copy; Designed and Developed by RENTWHƎELZ</h4>
+    </div>
+   </div> 
+</div>
+<!-- footer end -->
+
+
+<!-- footer end -->
+
+
+
+
+
+    <!--Scroll Reveal-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+
+    <!------link to js----->
+    <script src="{% static 'main.js' %}"></script>
+</body>
+
+</html>
